@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.3.6-dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         1. Write a program that takes two user inputs for first and
+// last name using prompt and merge them in a new variable
+// titled fullName. Greet the user using his full name.
+var firstName=prompt("Enter your first name:");
+var lastName=prompt("Enter your last name:");
+var fullname=firstName+" "+lastName;
+document.write("<h1 class='text-center'>String Methods</h1>");
+document.write("<h1 class='text-center'>String Concatenation </h1>");
+document.write("<p class='text-center fs-3'>Hello, " + fullname + "!</p>");
+
+// 2. Write a program to take a user input about his favorite
+// mobile phone model. Find and display the length of user
+// input in your browser
+var mobileModel = prompt("Enter your favorite mobile phone model:");
+document.write("<h1 class='text-center'>Mobile Model Length (length method)</h1>");
+document.write("<p class='text-center fs-3'>my favorite mobile phone model is: " + mobileModel +"<br>length of string : " + mobileModel.length + " characters.</p>");
+
+// 3. Write a program to find the index of letter “n” in the word
+// “Pakistani” and display the result in your browser .
+var word = "Pakistani";
+var index = word.indexOf("n");
+document.write("<h1 class='text-center'>Index of 'n' in 'Pakistani' indexOf( ) method</h1>");
+document.write("<p class='text-center fs-3'>The index of letter 'n' in the word 'Pakistani' is: " + index + "</p>");
+
+// 4. Write a program to find the last index of letter “l” in the
+// word “Hello World” and display the result in your browser.
+var phrase = "Hello World";
+var lastIndex = phrase.lastIndexOf("l");
+document.write("<h1 class='text-center'>Last Index of 'l' in 'Hello World' lastIndexOf( ) method</h1>");
+document.write("<p class='text-center fs-3'>The last index of letter 'l' in the word 'Hello World' is: " + lastIndex + "</p>");
+
+// 5. Write a program to find the character at 3rd index in the
+// word “Pakistani” and display the result in your browser.
+var word2 = "Pakistani";
+var charAtIndex3 = word2.charAt(3);
+document.write("<h1 class='text-center'>Character at 3rd index in 'Pakistani' charAt( ) method</h1>");
+document.write("<p class='text-center fs-3'>The character at 3rd index in the word 'Pakistani' is: " + charAtIndex3 + "</p>");
+
+// 6. Repeat Q1 using string concat() method.
+var firstName2 = prompt("Enter your first name:");
+var lastName2 = prompt("Enter your last name:");
+var fullName2 = firstName2.concat(" ", lastName2);
+document.write("<h1 class='text-center'>String Concatenation (concat() method)</h1>");
+document.write("<p class='text-center fs-3'>Hello, " + fullName2 + "!</p>");
+
+// 7. Write a program to replace the “Hyder” to “Islam” in the
+// word “Hyderabad” and display the result in your browser.
+var city = "Hyderabad";
+var newCity=city.replace("Hyder","Islam");
+document.write("<h1 class='text-center'>Replace method</h1>");
+document.write("<p class='text-center fs-3'>City: " + city + "</p>");
+document.write("<p class='text-center fs-3'>After Replacement: " + newCity + "</p>");
+// 8. Write a program to replace all occurrences of “and” in the
+// string with “&” and display the result in your browser.
+// var message = “Ali and Sami are best friends. They play cricket and
+// football together.”;
+var message="Ali and Sami are best friends. They play cricket and football together";
+var newMessage=message.replace(/and/g,"&");
+document.write("<h1 class='text-center'>Replace all occurrences of 'and' with '&' global replace method</h1>");
+document.write("<p class='text-center fs-3'>Original Message: " + message + "</p>");
+document.write("<p class='text-center fs-3'>Modified Message: " + newMessage + "</p>");
+// 9. Write a program that converts a string “472” to a number
+// 472. Display the values & types in your browser.
+var str= "472";
+var strToNum=Number(str);
+document.write("<h1 class='text-center'>String to Number Conversion</h1>");
+document.write("<p class='text-center fs-3'>Value: "+str+ "<br>Type: " + typeof str + "</p>");
+document.write("<p class='text-center fs-3'>Converted Value: " + strToNum + "<br>Type: " + typeof strToNum + "</p>");
+
+// 10. Write a program that takes user input. Convert and
+// show the input in capital letters.
+var userInput=prompt("Enter a word:");
+var upperCaseInput=userInput.toUpperCase();
+document.write("<h1 class='text-center'>Convert User Input to Uppercase toUppercase method</h1>");
+document.write("<p class='text-center fs-3'>User input: "+userInput+ "<br>Uppercase: " + upperCaseInput + "</p>");
+
+// 11. Write a program that takes user input. Convert and
+// show the input in title case.
+var userInput2=prompt("Enter a word:");
+var titleCased = userInput2.charAt(0).toUpperCase()+userInput2.slice(1);
+document.write("<h1 class='text-center'>Convert User Input to Title Case</h1>");
+document.write("<p class='text-center fs-3'>User input: "+userInput2+"<br>Title Case: " + titleCased + "</p>");
+
+// 12. Write a program that converts the variable num to
+// string.
+// var num = 35.36 ;
+// Remove the dot to display “3536” display in your browser.
+var num2=35.36;
+var numToString=num2.toString();
+document.write("<h1 class='text-center'>Convert Number to String</h1>");
+document.write("<p class='text-center fs-3'>Number: " + num2 + "<br>Result: " + numToString.replace(".","") + "</p>");
+
+// 13. Write a program to take user input and store username
+// in a variable. If the username contains any special symbol
+// among [@ . , !], prompt the user to enter a valid username.
+// For character codes of [@ . , !]
+var username = prompt("Enter your username:");
+if (username.includes("@") || username.includes(".") || username.includes(",") || username.includes("!")) {
+    alert("Please enter a valid username without special symbols.");
+}
+else {
+    document.write("<h1 class='text-center'>Valid Username</h1>");
+    document.write("<p class='text-center fs-3'>Username: " + username + "</p>");
+}
+
+// 14. You have an array
+// A = ["cake”, “apple pie”, “cookie”, “chips”, “patties”]
+// Write a program to enable “search by user input” in an
+// array. After searching, prompt the user whether the given
+// item is found in the list or not.
+// Note: Perform case insensitive search. Whether the user
+// enters cookie, Cookie, COOKIE or coOkIE, program
+// should inform about its availability. Example:
+var bakeryItems= ["cake", "apple pie", "cookie", "chips", "patties"];
+var searchByUser=prompt("Welcome to the bakery! What item would you like to search for?");
+var searchResult=bakeryItems.includes(searchByUser.toLowerCase());
+if(searchResult){
+    alert("Yes, " + searchByUser + " is available in our bakery.");
+}else{
+    alert("Sorry, " + searchByUser + " is not available in our bakery.");
+}
+
+// 15. Write a program to take password as an input from
+// user. The password must qualify these requirements:
+// a. It should contain alphabets and numbers
+// b. It should not start with a number
+// c. It must at least 6 characters long
+// If the password does not meet above requirements,
+// prompt the user to enter a valid password.
+// For character codes of a-z, A-Z & 0-9, refer to ASCII
+// table at the end of this document.
+
+var pswd=prompt("Enter your password:");
+var charcode=pswd.charCodeAt(0);
+document.write("<h1 class='text-center'>Password Validation</h1>");
+document.write("<p class='text-center fs-3'>Entered Password : " + pswd + "</p>");
+for(var i=0;i<pswd.length;i++){
+    if((pswd.charCodeAt(i) >=65 && pswd.charCodeAt(i) <=90)||
+      (pswd.charCodeAt(i) >=97 && pswd.charCodeAt(i) <=122))
+      {
+         continue;
+}else if(pswd.charCodeAt(i) >=48 && pswd.charCodeAt(i) <=57){
+         document.write("<p class='text-center fs-3'>Password must contain alphabets and numbers.</p>");
+         break;
+}}
+if(pswd.length <6){
+    document.write("<p class='text-center fs-3'>Password must be at least 6 characters long.</p>");
+}else if(charcode >= 48 && charcode <= 57){
+    document.write("<p class='text-center fs-3'>Password should not start with a number.</p>");
+}
+// 16. Write a program to convert the following string to an
+// array using string split method.
+// var university = “University of Karachi”;
+// Display the elements of array in your browser.
+var university = "University of Karachi";
+var arrayOfString=university.split(" ");
+    doucment.write("<h1 class='text-center'>String to Array Conversion</h1>");
+for(var i=0;i<arrayOfString.length;i++){
+    document.write("<p class='text-center fs-3'>"+ arrayOfString[i] + "</p>");
+}
+// 17. Write a program to display the last character of a user
+// input.
+var userInput3=prompt("Enter a word:");
+document.write("<h1 class='text-center'>Last Character of User Input</h1>");
+document.write("<p class='text-center fs-3'>User Input: " + userInput3 + "<br>Last Character Of Input: " + userInput3.charAt(userInput3.length - 1) + "</p>");
+
+// 18. You have a string “The quick brown fox jumps over the
+// lazy dog”. Write a program to count number of
+// occurrences of word “the” in given string.
+var sentence = "The quick brown fox jumps over the lazy dog";
+var count = 0;
+var words = sentence.toLowerCase().split(" ");
+for(var i=0;i<words.length;i++){
+    if(words[i] === "the"){
+        count++;
+    }
+}
+document.write("<h1 class='text-center'>Occurrences of 'the'</h1>");
+document.write("<p class='text-center fs-3'>Number of occurrences: " + count + "</p>");
+</script>
+</body>
+</html>
